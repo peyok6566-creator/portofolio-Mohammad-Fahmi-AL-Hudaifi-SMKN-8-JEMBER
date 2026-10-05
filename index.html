@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Siswa PKL - UI/UX & Web Developer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        accent: '#6366f1'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 transition-colors">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <!-- Logo / Name -->
+            <a href="#beranda" class="font-extrabold text-lg tracking-tight hover:opacity-80 transition-opacity">
+                Mohammad<span class="text-brand-600 dark:text-accent">.Fahmi</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#beranda" class="hover:text-brand-600 dark:hover:text-accent transition-colors">Beranda</a>
+                <a href="#tentang" class="hover:text-brand-600 dark:hover:text-accent transition-colors">Tentang Saya</a>
+                <a href="#keahlian" class="hover:text-brand-600 dark:hover:text-accent transition-colors">Keahlian & Tools</a>
+                <a href="#kontak" class="hover:text-brand-600 dark:hover:text-accent transition-colors">Kontak</a>
+            </nav>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all active:scale-95">
+                <i id="theme-toggle-dark-icon" class="fas fa-moon hidden text-base"></i>
+                <i id="theme-toggle-light-icon" class="fas fa-sun hidden text-amber-400 text-base"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+                <div class="flex-1 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-slate-900 text-brand-600 dark:text-accent text-xs font-semibold mb-6 border border-brand-100 dark:border-slate-800 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Siswa PKL / UI/UX & Web Developer
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
+                        Halo, Saya <span class="bg-gradient-to-r from-brand-600 via-indigo-600 to-accent bg-clip-text text-transparent">Mohammad Fahmi</span>
+                    </h1>
+                    <p class="text-slate-600 dark:text-slate-400 text-base sm:text-lg mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                        Fokus merancang antarmuka aplikasi yang intuitif (UI/UX) dan mengembangkannya menjadi website modern yang cepat serta responsif.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+                        <a href="#kontak" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0">
+                            <i class="fas fa-paper-plane mr-2"></i> Hubungi Saya
+                        </a>
+                        <a href="#keahlian" class="px-6 py-3 rounded-xl bg-slate-200/80 dark:bg-slate-900 hover:bg-slate-300 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm transition-all hover:-translate-y-0.5 active:translate-y-0">
+                            Lihat Keahlian
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Photo -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-accent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+                    <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-800 shadow-xl bg-slate-200 dark:bg-slate-800">
+                        <img src="WhatsApp Image 2026-06-03 at 17.19.41 (1).jpeg" alt="Mohammad Fahmi" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="tentang" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-y border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="max-w-2xl">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-accent mb-2">Tentang Saya</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-6">Menciptakan Tampilan Web yang Menarik & Menyenangkan</h3>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4 text-base">
+                    Saya adalah seorang siswa PKL dengan antusiasme tinggi di bidang <strong>UI/UX Design</strong> dan <strong>Web Development</strong>. Saya gemar mengolah ide visual kreatif menjadi prototipe yang interaktif, lalu mengimplementasikannya ke dalam baris kode yang bersih dan terstruktur.
+                </p>
+                <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+                    Menguasai alur kerja perancangan sistem modern serta fondasi pemrograman web, saya selalu bersemangat untuk terus belajar, mengeksplorasi teknologi baru, dan berkolaborasi secara profesional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN & TOOLS -->
+    <section id="keahlian" class="py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-accent mb-2">Kemampuan</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">Keahlian Teknis & Tools</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills Bars -->
+                <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-shadow">
+                    <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-code text-brand-600 dark:text-accent"></i> Keahlian Teknis
+                    </h4>
+
+                    <div class="space-y-6">
+                        <!-- UI/UX Design - 90% -->
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm font-semibold">
+                                <span class="text-slate-800 dark:text-slate-200">UI/UX Design</span>
+                                <span class="text-brand-600 dark:text-accent font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-3 rounded-full overflow-hidden p-0.5">
+                                <div class="bg-gradient-to-r from-brand-600 to-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- HTML - 85% -->
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm font-semibold">
+                                <span class="text-slate-800 dark:text-slate-200">HTML</span>
+                                <span class="text-brand-600 dark:text-accent font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-3 rounded-full overflow-hidden p-0.5">
+                                <div class="bg-gradient-to-r from-brand-600 to-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript - 75% -->
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm font-semibold">
+                                <span class="text-slate-800 dark:text-slate-200">JavaScript</span>
+                                <span class="text-brand-600 dark:text-accent font-bold">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-3 rounded-full overflow-hidden p-0.5">
+                                <div class="bg-gradient-to-r from-brand-600 to-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Laravel - 70% -->
+                        <div>
+                            <div class="flex justify-between mb-2 text-sm font-semibold">
+                                <span class="text-slate-800 dark:text-slate-200">Laravel</span>
+                                <span class="text-brand-600 dark:text-accent font-bold">70%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 dark:bg-slate-800 h-3 rounded-full overflow-hidden p-0.5">
+                                <div class="bg-gradient-to-r from-brand-600 to-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Software Cards -->
+                <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                            <i class="fas fa-toolbox text-brand-600 dark:text-accent"></i> Tools & Software
+                        </h4>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Figma -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center gap-2 hover:border-pink-500/50 hover:bg-slate-100/50 dark:hover:bg-slate-800 transition-all group">
+                                <i class="fab fa-figma text-3xl text-pink-500 group-hover:scale-110 transition-transform"></i>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Figma</span>
+                                <span class="text-[11px] text-slate-500 dark:text-slate-400">UI/UX Design Tool</span>
+                            </div>
+
+                            <!-- VS Code -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center gap-2 hover:border-sky-500/50 hover:bg-slate-100/50 dark:hover:bg-slate-800 transition-all group">
+                                <i class="fas fa-code text-3xl text-sky-500 group-hover:scale-110 transition-transform"></i>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200">VS Code</span>
+                                <span class="text-[11px] text-slate-500 dark:text-slate-400">Code Editor</span>
+                            </div>
+
+                            <!-- Laragon -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center gap-2 hover:border-indigo-500/50 hover:bg-slate-100/50 dark:hover:bg-slate-800 transition-all group">
+                                <i class="fas fa-server text-3xl text-indigo-500 group-hover:scale-110 transition-transform"></i>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Laragon</span>
+                                <span class="text-[11px] text-slate-500 dark:text-slate-400">Local Dev Server</span>
+                            </div>
+
+                            <!-- Laravel -->
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-800 flex flex-col items-center text-center gap-2 hover:border-red-500/50 hover:bg-slate-100/50 dark:hover:bg-slate-800 transition-all group">
+                                <i class="fab fa-laravel text-3xl text-red-500 group-hover:scale-110 transition-transform"></i>
+                                <span class="font-bold text-sm text-slate-800 dark:text-slate-200">Laravel</span>
+                                <span class="text-[11px] text-slate-500 dark:text-slate-400">PHP Framework</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-6 text-center">
+                        Tools utama yang digunakan untuk kebutuhan desain & pengembangan web.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="py-16 bg-slate-100/60 dark:bg-slate-900/40 border-t border-slate-200/60 dark:border-slate-800/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="max-w-xl mx-auto text-center mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-accent mb-2">Kontak</h2>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Mari Terhubung</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">
+                    Isi form di bawah ini untuk langsung mengirimkan pesan secara otomatis ke WhatsApp saya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <!-- Form Kontak Direct WhatsApp -->
+                <div class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 shadow-sm">
+                    <form id="contact-form" onsubmit="sendToWhatsApp(event)" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-2">Email</label>
+                            <input type="email" id="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                        </div>
+                        <div>
+                            <label for="address" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-2">Alamat / Kota</label>
+                            <input type="text" id="address" required placeholder="Contoh: Jakarta / Bandung" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase mb-2">Pesan</label>
+                            <textarea id="message" rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-md hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i> Kirim Pesan via WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Direct Contact Info Cards -->
+                <div class="space-y-4">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/+/6285784062531" target="_blank" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 flex items-center gap-5 hover:border-emerald-500/50 transition-all shadow-sm group">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">WhatsApp</div>
+                            <div class="font-extrabold text-slate-800 dark:text-slate-200 text-base">+62 857-8406-2531</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Chat langsung via WhatsApp</div>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:ahmad.rizky@email.com" class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 flex items-center gap-5 hover:border-sky-500/50 transition-all shadow-sm group">
+                        <div class="w-14 h-14 rounded-2xl bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Email</div>
+                            <div class="font-extrabold text-slate-800 dark:text-slate-200 text-base">fahmi121125@gmail.com</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Kirim surel resmi</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800/80 text-center">
+        <div class="max-w-5xl mx-auto px-4 text-xs text-slate-500 dark:text-slate-400">
+            &copy; 2026 Mohammad Fahmi. Portofolio Siswa PKL. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. DARK / LIGHT MODE LOGIC ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            // Ubah nomor ini sesuai nomor WhatsApp Anda (Gunakan kode negara tanpa tanda '+', contoh: 6281234567890)
+            const phoneNumber = "6285784062531";
+
+            // Ambil data dari form input
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Rangkai teks pesan WhatsApp secara rapi
+            const whatsappMessage = `Halo, saya *${name}*\nEmail: ${email}\nAlamat: ${address}\n\n*Pesan:*\n${message}`;
+
+            // Encode URI agar karakter spesial (spasi, enter, dll) aman dikirim
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Buka tautan WhatsApp di tab baru
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
